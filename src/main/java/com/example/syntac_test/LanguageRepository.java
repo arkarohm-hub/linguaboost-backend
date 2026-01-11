@@ -5,6 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LanguageRepository extends JpaRepository<Language, Long>{
-    // We write NOTHING here.
-    // Spring automatically gives us: .save(), .findAll(), .findById(), .deleteById(), etc.
+    java.util.List<Language> findByName(String name);
 }

@@ -17,6 +17,9 @@ public class LanguageService {
 
     // Let's add a method to save data so we can test it
     public void addLanguage(String name, String desc) {
+        if (!languageRepository.findByName(name).isEmpty()) {
+            throw new RuntimeException("Language " + name + " already exists!");
+        }
         languageRepository.save(new Language(name, desc));
     }
-}i
+} 
