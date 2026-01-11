@@ -1,5 +1,5 @@
 # 1. Start with a base OS that has Java installed(The Foundation)
-FROM eclipse-eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 # 2.  Create a folder inside the box 
 WORKDIR /app
 
